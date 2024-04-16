@@ -14,8 +14,8 @@ public class EnemyTilt : MonoBehaviour
 
     void Update()
     {
-        // Detect movement on the X-axis
-        float movementX = Input.GetAxis("Horizontal");
+        // Simulate automatic movement on the X-axis
+        float movementX = Mathf.Sin(Time.time); // You can adjust this to control the movement pattern
 
         // Calculate the tilt amount based on the movement on the X-axis
         float tiltAmount = movementX * tiltAngle;
