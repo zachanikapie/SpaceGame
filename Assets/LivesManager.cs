@@ -1,12 +1,15 @@
 using UnityEngine;
-using TMPro; // Import TextMeshPro namespace
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LivesManager : MonoBehaviour
 {
     public int startingLives = 3;
     private int currentLives;
 
-    public TextMeshProUGUI livesText; // Reference to the TextMeshPro UI text displaying lives
+    public TextMeshProUGUI livesText;
+    public GameObject explosionPrefab;
+    public GameObject gameOverScreen;
 
     void Start()
     {
@@ -16,7 +19,6 @@ public class LivesManager : MonoBehaviour
 
     void UpdateLivesUI()
     {
-        // Update the UI text to display the current lives
         livesText.text = "Lives: " + currentLives;
     }
 
@@ -26,8 +28,10 @@ public class LivesManager : MonoBehaviour
         UpdateLivesUI();
         if (currentLives <= 0)
         {
-            // Trigger game over sequence
-            Debug.Log("Game Over!");
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            gameOverScreen.SetActive(true);
+            // Turn off the lives text
+            livesText.gameObject.SetActive(false);
         }
     }
 
@@ -35,8 +39,9 @@ public class LivesManager : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            // If collided with an enemy, lose a life
             LoseLife();
         }
     }
+
+    
 }
