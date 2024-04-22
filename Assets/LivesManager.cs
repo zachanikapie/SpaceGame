@@ -10,6 +10,7 @@ public class LivesManager : MonoBehaviour
     public TextMeshProUGUI livesText;
     public GameObject explosionPrefab;
     public GameObject gameOverScreen;
+    public GameObject spaceship; // Reference to the spaceship GameObject
 
     void Start()
     {
@@ -28,9 +29,9 @@ public class LivesManager : MonoBehaviour
         UpdateLivesUI();
         if (currentLives <= 0)
         {
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Instantiate(explosionPrefab, spaceship.transform.position, Quaternion.identity);
+            Destroy(spaceship); // Destroy the spaceship GameObject
             gameOverScreen.SetActive(true);
-            // Turn off the lives text
             livesText.gameObject.SetActive(false);
         }
     }
