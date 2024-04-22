@@ -29,7 +29,7 @@ public class LivesManager : MonoBehaviour
         UpdateLivesUI();
         if (currentLives <= 0)
         {
-            Instantiate(explosionPrefab, spaceship.transform.position, Quaternion.identity);
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(spaceship); // Destroy the spaceship GameObject
             gameOverScreen.SetActive(true);
             livesText.gameObject.SetActive(false);
