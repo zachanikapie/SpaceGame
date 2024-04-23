@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class LifePickup : MonoBehaviour
 {
-    public AudioClip pickupSound; // Sound to play when the pickup is collected
-    public float destroyDelay = 2f; // Delay before destroying the pickup prefab
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) // Assuming the player is tagged as "Player"
@@ -13,10 +10,14 @@ public class LifePickup : MonoBehaviour
             if (livesManager != null)
             {
                 livesManager.AddLife();
-                AudioSource.PlayClipAtPoint(pickupSound, transform.position); // Play pickup sound
-                Debug.Log("Pickup collected by player."); // For debugging
-                gameObject.SetActive(false); // Deactivate the pickup prefab
-                Destroy(gameObject, destroyDelay); // Destroy the pickup object after a delay
+                // Trigger the sound from the player (spaceship)'s AudioSource
+                AudioSource spaceshipAudio = other.GetComponent<AudioSource>();
+                if (spaceshipAudio != null && spaceshipAudio.clip != null)
+                {
+                    spaceshipAudio.PlayOneShot(spaceshipAudio.clip); // Play the sound
+                }
+                gameObject.SetActive(false); // Deactivate the pickup object
+                Destroy(gameObject, 2f); // Destroy the pickup object after 2 seconds
             }
         }
     }
