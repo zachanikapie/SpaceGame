@@ -45,6 +45,12 @@ public class LivesManager : MonoBehaviour
         }
     }
 
+    public void AddLife()
+    {
+        currentLives++;
+        UpdateLivesUI();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
@@ -52,6 +58,4 @@ public class LivesManager : MonoBehaviour
             LoseLife();
         }
     }
-
-   
 }

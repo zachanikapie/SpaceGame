@@ -65,6 +65,10 @@ PrefabInstance:
       value: HealthPack
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8ae2d6b919fcd83488aab87be7e3cea3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8ae2d6b919fcd83488aab87be7e3cea3, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -75,6 +79,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8ae2d6b919fcd83488aab87be7e3cea3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4230425257847627407}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8ae2d6b919fcd83488aab87be7e3cea3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4996352918819508249}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8ae2d6b919fcd83488aab87be7e3cea3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5605997475908137399}
   m_SourcePrefab: {fileID: 100100000, guid: 8ae2d6b919fcd83488aab87be7e3cea3, type: 3}
 --- !u!1 &9096927352075101051 stripped
 GameObject:
@@ -96,3 +106,37 @@ MonoBehaviour:
   spinAxis: {x: 0, y: 0, z: 2}
   spinSpeed: 50
   moveSpeed: 5
+--- !u!114 &-4996352918819508249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096927352075101051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199569cb758de964789f18ee6d69872c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: 4458112ec0b0d214e9a7a3d20b394669, type: 3}
+--- !u!65 &5605997475908137399
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096927352075101051}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020000007, y: 0.09927479, z: 0.100828476}
+  m_Center: {x: 0.000000029802322, y: 0, z: 0}
