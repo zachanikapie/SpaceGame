@@ -11,6 +11,7 @@ public class LivesManager : MonoBehaviour
     public GameObject explosionPrefab;
     public GameObject gameOverScreen;
     public GameObject spaceship; // Reference to the spaceship GameObject
+    public AudioSource[] gameOverAudioSources; // Array of AudioSource components for game over sounds
 
     void Start()
     {
@@ -33,6 +34,14 @@ public class LivesManager : MonoBehaviour
             Destroy(spaceship); // Destroy the spaceship GameObject
             gameOverScreen.SetActive(true);
             livesText.gameObject.SetActive(false);
+            // Play game over sounds using the assigned AudioSource components
+            foreach (var audioSource in gameOverAudioSources)
+            {
+                if (audioSource != null)
+                {
+                    audioSource.Play();
+                }
+            }
         }
     }
 
@@ -44,5 +53,5 @@ public class LivesManager : MonoBehaviour
         }
     }
 
-    
+   
 }
