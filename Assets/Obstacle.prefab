@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 261865560654600603}
   - component: {fileID: 3755177694327677307}
   - component: {fileID: 47808480627451006}
+  - component: {fileID: -8054316866726321363}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Enemy
@@ -129,8 +130,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6606513533077799236}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a6c04085419dab4a9f7147d400e32e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &-8054316866726321363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606513533077799236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f04d9dc59ffef4795265e68aa2c4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  minX: -23
+  maxX: 23
+  minZ: -45
+  maxZ: 44
