@@ -7941,6 +7941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingLives: 1
+  maxLives: 4
   livesText: {fileID: 449835665}
   explosionPrefab: {fileID: 1643561768290729893, guid: 84566f7e26ab83048b6627d09e7b3934, type: 3}
   gameOverScreen: {fileID: 343900809}

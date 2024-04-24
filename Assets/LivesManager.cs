@@ -5,6 +5,7 @@ using TMPro;
 public class LivesManager : MonoBehaviour
 {
     public int startingLives = 3;
+    public int maxLives = 3; // Maximum lives allowed
     private int currentLives;
 
     public TextMeshProUGUI livesText;
@@ -47,8 +48,11 @@ public class LivesManager : MonoBehaviour
 
     public void AddLife()
     {
-        currentLives++;
-        UpdateLivesUI();
+        if (currentLives < maxLives) // Limit maximum lives to the maxLives value
+        {
+            currentLives++;
+            UpdateLivesUI();
+        }
     }
 
     void OnTriggerEnter(Collider other)
