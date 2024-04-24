@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+using System.Collections;
 public class LivesManager : MonoBehaviour
 {
     public int startingLives = 3;
@@ -13,6 +13,8 @@ public class LivesManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject spaceship; // Reference to the spaceship GameObject
     public AudioSource[] gameOverAudioSources; // Array of AudioSource components for game over sounds
+
+    private bool canLoseLife = true; // Flag to control if the spaceship can lose a life
 
     void Start()
     {
@@ -27,6 +29,9 @@ public class LivesManager : MonoBehaviour
 
     public void LoseLife()
     {
+        if (!canLoseLife) // If the spaceship is in cooldown, return without losing a life
+            return;
+
         currentLives--;
         UpdateLivesUI();
         if (currentLives <= 0)
@@ -44,6 +49,17 @@ public class LivesManager : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            StartCoroutine(StartCooldown());
+        }
+    }
+
+    IEnumerator StartCooldown()
+    {
+        canLoseLife = false;
+        yield return new WaitForSeconds(2f); // Wait for 2 seconds
+        canLoseLife = true;
     }
 
     public void AddLife()
