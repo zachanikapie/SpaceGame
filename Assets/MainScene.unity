@@ -7229,7 +7229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1894110622187674090, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
@@ -8484,7 +8484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067c120861a82664fb429e6ae0fa83a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevel: 10
+  currentLevel: 1
   currentXP: 0
   maxXP: 100
   xpBar: {fileID: 341624344}
@@ -8538,7 +8538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1901701450706430586, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: m_LocalPosition.x

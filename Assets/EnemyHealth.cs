@@ -7,6 +7,9 @@ public class EnemyHealth : MonoBehaviour
     public float dropChance = 0.5f; // Chance of dropping the health pickup
     private int currentHealth; // Current health of the enemy
 
+    // Particle effect to play when hit
+    public ParticleSystem hitParticle;
+
     // Cluster object to drop when the enemy dies
     public GameObject clusterObject; // The object of the cluster to drop
     public int clusterCount = 3;     // Number of clusters to drop
@@ -21,6 +24,12 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount; // Reduce current health by the damage amount
+
+        // Play hit particle effect
+        if (hitParticle != null)
+        {
+            Instantiate(hitParticle, transform.position, Quaternion.identity);
+        }
 
         // Check if the enemy's health has reached zero or below
         if (currentHealth <= 0)

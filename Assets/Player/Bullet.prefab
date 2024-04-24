@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
+  hitParticle: {fileID: 363015429067361276, guid: 5494d0be50beb7a42b9f0bcc34dfda56, type: 3}
 --- !u!114 &1382019479615091612
 MonoBehaviour:
   m_ObjectHideFlags: 0

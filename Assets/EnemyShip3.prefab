@@ -269,6 +269,7 @@ MonoBehaviour:
   maxHealth: 10
   healthPickupPrefab: {fileID: 0}
   dropChance: 1
+  hitParticle: {fileID: 5032592163096704526, guid: 74390e7e508ae00449786cad53d1c3c6, type: 3}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
   clusterCount: 5
   clusterSpread: 5

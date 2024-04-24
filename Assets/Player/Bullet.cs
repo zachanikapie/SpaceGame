@@ -3,6 +3,7 @@ using UnityEngine;
 public class BulletDamage : MonoBehaviour
 {
     public int damageAmount = 10; // Amount of damage the bullet deals
+    public ParticleSystem hitParticle; // Reference to the particle effect
 
     void OnTriggerEnter(Collider other)
     {
@@ -17,6 +18,12 @@ public class BulletDamage : MonoBehaviour
             {
                 // Deal damage to the enemy
                 enemyHealth.TakeDamage(damageAmount);
+            }
+
+            // Instantiate the hit particle at the position of the collision
+            if (hitParticle != null)
+            {
+                Instantiate(hitParticle, transform.position, Quaternion.identity);
             }
 
             // Destroy the bullet
