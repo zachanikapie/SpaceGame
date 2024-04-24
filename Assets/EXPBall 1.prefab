@@ -102,6 +102,7 @@ MonoBehaviour:
   initialSpeed: 5
   acceleration: 40
   playerTag: Player
+  expToAdd: 1
 --- !u!54 &-5762090472083535870
 Rigidbody:
   m_ObjectHideFlags: 0

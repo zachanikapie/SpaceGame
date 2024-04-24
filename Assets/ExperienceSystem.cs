@@ -8,8 +8,8 @@ public class ExperienceSystem : MonoBehaviour
     public int maxXP = 100; // Maximum XP needed for level up
     public Slider xpBar; // Reference to the UI slider representing XP bar
 
-    // Add XP when an enemy is killed
-    public void AddXP(int amount)
+    // Add XP externally
+    public void AddExternalXP(int amount)
     {
         currentXP += amount;
         // Check for level up
