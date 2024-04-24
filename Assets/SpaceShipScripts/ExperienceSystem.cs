@@ -34,11 +34,18 @@ public class ExperienceSystem : MonoBehaviour
         // Check if the player reached level 10
         if (currentLevel == 10)
         {
+            // Get the current position and rotation of this GameObject
+            Vector3 position = transform.position;
+            Quaternion rotation = transform.rotation;
+
             // Disable the attached GameObject
             gameObject.SetActive(false);
-            // Enable the level 10 GameObject if it's assigned
+
+            // Enable the level 10 GameObject if it's assigned and move it to the same position and rotation
             if (level10Object != null)
             {
+                level10Object.transform.position = position;
+                level10Object.transform.rotation = rotation;
                 level10Object.SetActive(true);
             }
         }
