@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1763978361680575164}
   - component: {fileID: 6497816835569577802}
   - component: {fileID: 7232631356880983563}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet 2 - Copy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.168, z: 0}
-  m_LocalScale: {x: 0.19603258, y: 0.19603258, z: 1.6486733}
+  m_LocalScale: {x: 1, y: 0.19603258, z: 11}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,10 +96,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 320
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -146,4 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcde85c1b119c8c42af6ebcba4896144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
+  damageAmount: 10
+  hitParticle: {fileID: 0}

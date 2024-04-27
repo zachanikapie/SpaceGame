@@ -7,7 +7,7 @@ public class MeshRendererToggle : MonoBehaviour
     public float toggleSpeed = 0.5f; // Speed of the toggle in seconds
 
     private MeshRenderer meshRenderer;
-    private bool isToggling = false;
+    public bool isToggling = false;
 
     void Start()
     {
