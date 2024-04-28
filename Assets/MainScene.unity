@@ -198,7 +198,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthPickupPrefab: {fileID: 9096927352075101051, guid: a57d5070fe59440458e13443a2c5737f, type: 3}
-  dropChance: 3
+  healthDropChance: 0.5
+  rocketRefillPrefab: {fileID: 0}
+  rocketRefillDropChance: 0.3
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
   clusterCount: 50
@@ -1508,7 +1510,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthPickupPrefab: {fileID: 9096927352075101051, guid: a57d5070fe59440458e13443a2c5737f, type: 3}
-  dropChance: 3
+  healthDropChance: 0.5
+  rocketRefillPrefab: {fileID: 0}
+  rocketRefillDropChance: 0.3
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
   clusterCount: 50
@@ -2901,6 +2905,140 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133273930}
+  m_CullTransparentMesh: 1
+--- !u!1 &1137536179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1137536180}
+  - component: {fileID: 1137536182}
+  - component: {fileID: 1137536181}
+  m_Layer: 5
+  m_Name: Rockets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1137536180
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137536179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1528086325}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 282.5, y: -418}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1137536181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137536179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e88131f24e351234aa7eb83388dabbd3, type: 2}
+  m_sharedMaterial: {fileID: 4241339435542128376, guid: e88131f24e351234aa7eb83388dabbd3, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 23
+  m_fontSizeBase: 23
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -57.485474, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1137536182
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137536179}
   m_CullTransparentMesh: 1
 --- !u!1 &1169711106
 GameObject:
@@ -7915,7 +8053,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthPickupPrefab: {fileID: 9096927352075101051, guid: a57d5070fe59440458e13443a2c5737f, type: 3}
-  dropChance: 3
+  healthDropChance: 0.5
+  rocketRefillPrefab: {fileID: 0}
+  rocketRefillDropChance: 0.3
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
   clusterCount: 50
@@ -8464,6 +8604,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1423256208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+  m_PrefabInstance: {fileID: 7561950644580965861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1423256210 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4181679814738544549, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+  m_PrefabInstance: {fileID: 7561950644580965861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423256208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dafe39293e14ac46b6a4fc65d2b417c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1423256223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423256208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c1a6e4ac025fb4c976af82cc5e11c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  livesManager: {fileID: 1423256210}
+  bulletSpawnPoint: {fileID: 2057239395}
+  bulletPrefab: {fileID: 1599328952672891947, guid: 2dbbaba8a3b976f4f8ae897306c329b8, type: 3}
+  bulletSpeed: 50
+--- !u!114 &1423256224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423256208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1c39ce3c865e74bb2f8fbd4c4b08d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRockets: 3
 --- !u!1 &1423956596
 GameObject:
   m_ObjectHideFlags: 0
@@ -8952,6 +9137,7 @@ RectTransform:
   - {fileID: 221802036}
   - {fileID: 341624343}
   - {fileID: 449835664}
+  - {fileID: 1137536180}
   - {fileID: 1706752898}
   - {fileID: 35141321}
   - {fileID: 828712142}
@@ -9669,7 +9855,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthPickupPrefab: {fileID: 9096927352075101051, guid: a57d5070fe59440458e13443a2c5737f, type: 3}
-  dropChance: 3
+  healthDropChance: 0.5
+  rocketRefillPrefab: {fileID: 0}
+  rocketRefillDropChance: 0.3
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
   clusterCount: 50
@@ -9926,6 +10114,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1853057495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+--- !u!1 &2057239394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2057239395}
+  m_Layer: 7
+  m_Name: BulletSpawnPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2057239395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057239394}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000010066867, y: -0.7071068, z: -0.70710677, w: -0.000000089406974}
+  m_LocalPosition: {x: 0, y: 0.04068, z: -0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 284179390}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067152153 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
@@ -10094,6 +10313,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 449835665}
     - target: {fileID: 4181679814738544549, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: maxRockets
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181679814738544549, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: rocketsText
+      value: 
+      objectReference: {fileID: 1137536181}
+    - target: {fileID: 4181679814738544549, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 343900809}
@@ -10143,8 +10370,17 @@ PrefabInstance:
       objectReference: {fileID: 694918680}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1901701450706430586, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 2057239395}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1423256223}
+    - targetCorrespondingSourceObject: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1423256224}
   m_SourcePrefab: {fileID: 100100000, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

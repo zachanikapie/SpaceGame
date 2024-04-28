@@ -4,7 +4,9 @@ public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 100; // Maximum health of the enemy
     public GameObject healthPickupPrefab; // Health pickup prefab to drop
-    public float dropChance = 0.5f; // Chance of dropping the health pickup
+    public float healthDropChance = 0.5f; // Chance of dropping the health pickup
+    public GameObject rocketRefillPrefab; // Rocket refill pickup prefab to drop
+    public float rocketRefillDropChance = 0.3f; // Chance of dropping the rocket refill pickup
     private int currentHealth; // Current health of the enemy
 
     // Particle effect to play when hit
@@ -44,10 +46,17 @@ public class EnemyHealth : MonoBehaviour
         // Perform any death-related actions here, such as playing death animation, dropping items, etc.
 
         // Check if the health pickup prefab is assigned and if the drop chance is met
-        if (healthPickupPrefab != null && Random.value <= dropChance)
+        if (healthPickupPrefab != null && Random.value <= healthDropChance)
         {
             // Instantiate the health pickup at the enemy's position
             Instantiate(healthPickupPrefab, transform.position, Quaternion.identity);
+        }
+
+        // Check if the rocket refill pickup prefab is assigned and if the drop chance is met
+        if (rocketRefillPrefab != null && Random.value <= rocketRefillDropChance)
+        {
+            // Instantiate the rocket refill pickup at the enemy's position
+            Instantiate(rocketRefillPrefab, transform.position, Quaternion.identity);
         }
 
         // Check if the cluster object is assigned

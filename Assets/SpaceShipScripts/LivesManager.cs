@@ -2,13 +2,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
+
 public class LivesManager : MonoBehaviour
 {
     public int startingLives = 3;
     public int maxLives = 3; // Maximum lives allowed
     private int currentLives;
 
+    public int startingRockets = 3;
+    public int maxRockets = 5; // Maximum rockets allowed
+    public int currentRockets;
+
     public TextMeshProUGUI livesText;
+    public TextMeshProUGUI rocketsText; // Text for displaying rocket count
     public GameObject explosionPrefab;
     public GameObject gameOverScreen;
     public GameObject spaceship; // Reference to the spaceship GameObject
@@ -16,15 +22,17 @@ public class LivesManager : MonoBehaviour
 
     private bool canLoseLife = true; // Flag to control if the spaceship can lose a life
 
-    void Start()
+   public void Start()
     {
         currentLives = startingLives;
-        UpdateLivesUI();
+        currentRockets = startingRockets;
+        UpdateUI();
     }
 
-    void UpdateLivesUI()
+   public void UpdateUI()
     {
         livesText.text = "Lives: " + currentLives;
+        rocketsText.text = "Rockets: " + currentRockets; // Update rocket count text
     }
 
     public void LoseLife()
@@ -33,7 +41,7 @@ public class LivesManager : MonoBehaviour
             return;
 
         currentLives--;
-        UpdateLivesUI();
+        UpdateUI();
         if (currentLives <= 0)
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
@@ -67,7 +75,25 @@ public class LivesManager : MonoBehaviour
         if (currentLives < maxLives) // Limit maximum lives to the maxLives value
         {
             currentLives++;
-            UpdateLivesUI();
+            UpdateUI();
+        }
+    }
+
+    public void UseRocket()
+    {
+        if (currentRockets > 0)
+        {
+            currentRockets--;
+            UpdateUI();
+        }
+    }
+
+    public void AddRocket()
+    {
+        if (currentRockets < maxRockets) // Limit maximum rockets to the maxRockets value
+        {
+            currentRockets++;
+            UpdateUI();
         }
     }
 
