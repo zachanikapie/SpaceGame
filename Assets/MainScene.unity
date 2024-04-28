@@ -202,7 +202,7 @@ MonoBehaviour:
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
   clusterCount: 50
-  clusterSpread: 1
+  clusterSpread: 10
 --- !u!1 &35141320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
   clusterCount: 50
-  clusterSpread: 1
+  clusterSpread: 10
 --- !u!65 &512472849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7919,7 +7919,7 @@ MonoBehaviour:
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
   clusterCount: 50
-  clusterSpread: 1
+  clusterSpread: 10
 --- !u!65 &1183879980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9673,7 +9673,7 @@ MonoBehaviour:
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
   clusterCount: 50
-  clusterSpread: 1
+  clusterSpread: 10
 --- !u!65 &1853057502
 BoxCollider:
   m_ObjectHideFlags: 0
