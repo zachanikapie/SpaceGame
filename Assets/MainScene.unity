@@ -8078,6 +8078,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1901701450706430586, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       insertIndex: 3
       addedObject: {fileID: 426302610}
+    - targetCorrespondingSourceObject: {fileID: 1901701450706430586, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1919675380}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       insertIndex: -1
@@ -8091,6 +8094,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2067152184}
+    - targetCorrespondingSourceObject: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2067152185}
   m_SourcePrefab: {fileID: 100100000, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
 --- !u!1 &1273928897
 GameObject:
@@ -9660,6 +9666,100 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.025455037, y: 0.025479384, z: 0.13190202}
   m_Center: {x: -9.313227e-10, y: -0.018189166, z: 0.047743138}
+--- !u!1 &1919675378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1919675380}
+  - component: {fileID: 1919675379}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1919675379
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919675378}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.8867924, g: 0.6568167, b: 0.17986828, a: 1}
+  m_Intensity: 0
+  m_Range: 120
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1919675380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919675378}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: -0.0176, z: 0.0636}
+  m_LocalScale: {x: 0.009999995, y: 0.009999997, z: 0.009999997}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067152168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924276321
 GameObject:
   m_ObjectHideFlags: 0
@@ -9866,6 +9966,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 410a3b56d8d89bd449d85b8319250461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2067152185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067152153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59f3c7358cb99d4f9bc5a4b0a45d22c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLight: {fileID: 1919675379}
+  intensityIncreaseDuration: 0.3
+  intensityDecreaseDuration: 1
+  maxIntensity: 200
 --- !u!1001 &7561950644580965861
 PrefabInstance:
   m_ObjectHideFlags: 0
