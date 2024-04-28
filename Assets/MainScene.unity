@@ -162,6 +162,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8325532339822062111, guid: c183766d485059140adfdc64911d0895, type: 3}
   bulletSpeed: 10
   fireInterval: 4
+  initialDelay: 5
 --- !u!65 &5341074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1492,6 +1493,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8325532339822062111, guid: c183766d485059140adfdc64911d0895, type: 3}
   bulletSpeed: 10
   fireInterval: 4
+  initialDelay: 5
 --- !u!114 &512472848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1532,6 +1534,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.03008053, y: 0.030145256, z: 0.15590008}
   m_Center: {x: -0.00000009546057, y: -0.01821318, z: 0.05641552}
+--- !u!1 &513805440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4af7b9110c14e204d87758ea7ac84580, type: 3}
+  m_PrefabInstance: {fileID: 1000317720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &513805442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513805440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54aee51d22543a42a2aa1006e6cccd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  endZPosition: 35
 --- !u!1 &517086586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,7 +2587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4af7b9110c14e204d87758ea7ac84580, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 35.1
+      value: 65.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4af7b9110c14e204d87758ea7ac84580, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2664,6 +2685,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1947281084}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4af7b9110c14e204d87758ea7ac84580, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 513805442}
     - targetCorrespondingSourceObject: {fileID: -516098083770646512, guid: 4af7b9110c14e204d87758ea7ac84580, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1853057496}
@@ -7876,6 +7900,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8325532339822062111, guid: c183766d485059140adfdc64911d0895, type: 3}
   bulletSpeed: 10
   fireInterval: 2
+  initialDelay: 5
 --- !u!114 &1183879979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8097,6 +8122,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2067152185}
+    - targetCorrespondingSourceObject: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2067152186}
   m_SourcePrefab: {fileID: 100100000, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
 --- !u!1 &1273928897
 GameObject:
@@ -9626,6 +9654,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8325532339822062111, guid: c183766d485059140adfdc64911d0895, type: 3}
   bulletSpeed: 10
   fireInterval: 2
+  initialDelay: 5
 --- !u!114 &1853057501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9982,6 +10011,20 @@ MonoBehaviour:
   intensityIncreaseDuration: 0.3
   intensityDecreaseDuration: 1
   maxIntensity: 200
+--- !u!114 &2067152186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067152153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195e8218d15d71a449df7595fd12bc27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossShip: {fileID: 513805440}
+  delay: 4
 --- !u!1001 &7561950644580965861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10067,6 +10110,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 341624344}
     - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: bossShip
+      value: 
+      objectReference: {fileID: 513805440}
+    - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: levelText
       value: 
       objectReference: {fileID: 1706752899}
@@ -10074,6 +10121,18 @@ PrefabInstance:
       propertyPath: level10Object
       value: 
       objectReference: {fileID: 2067152153}
+    - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: level10Objects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: level10Objects.Array.data[0]
+      value: 
+      objectReference: {fileID: 2067152153}
+    - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: level10Objects.Array.data[1]
+      value: 
+      objectReference: {fileID: 513805440}
     - target: {fileID: 7378287618750545251, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: m_Size.z
       value: 0.04
