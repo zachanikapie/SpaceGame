@@ -12,7 +12,13 @@ public class EnemyGun : MonoBehaviour
 
     void Start()
     {
-        // Start the shooting coroutine
+        // Start the shooting coroutine with a delay
+        StartCoroutine(StartShootingWithDelay(1f));
+    }
+
+    IEnumerator StartShootingWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         StartCoroutine(ShootCoroutine());
     }
 
@@ -37,4 +43,3 @@ public class EnemyGun : MonoBehaviour
         bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
     }
 }
-
