@@ -200,7 +200,7 @@ MonoBehaviour:
   dropChance: 3
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
-  clusterCount: 10
+  clusterCount: 50
   clusterSpread: 1
 --- !u!1 &35141320
 GameObject:
@@ -976,11 +976,11 @@ GameObject:
   - component: {fileID: 363435242}
   m_Layer: 0
   m_Name: EnemySpawner
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &363435242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,9 +1103,9 @@ GameObject:
   - component: {fileID: 395057586}
   - component: {fileID: 395057585}
   - component: {fileID: 395057584}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
-  m_TagString: Enemy
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1509,7 +1509,7 @@ MonoBehaviour:
   dropChance: 3
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
-  clusterCount: 10
+  clusterCount: 50
   clusterSpread: 1
 --- !u!65 &512472849
 BoxCollider:
@@ -2631,6 +2631,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4af7b9110c14e204d87758ea7ac84580, type: 3}
       propertyPath: m_Name
       value: BossShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4af7b9110c14e204d87758ea7ac84580, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8416272007918961125, guid: 4af7b9110c14e204d87758ea7ac84580, type: 3}
       propertyPath: m_Layer
@@ -7889,7 +7893,7 @@ MonoBehaviour:
   dropChance: 3
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
-  clusterCount: 10
+  clusterCount: 50
   clusterSpread: 1
 --- !u!65 &1183879980
 BoxCollider:
@@ -8056,6 +8060,10 @@ PrefabInstance:
       propertyPath: level10Object
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7378287618750545251, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: m_Size.z
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 7990623064060910454, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: healthPickupAudioSource
       value: 
@@ -8080,6 +8088,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2067152169}
+    - targetCorrespondingSourceObject: {fileID: 1238458872101073088, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2067152184}
   m_SourcePrefab: {fileID: 100100000, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
 --- !u!1 &1273928897
 GameObject:
@@ -9223,9 +9234,9 @@ GameObject:
   - component: {fileID: 1743604346}
   - component: {fileID: 1743604345}
   - component: {fileID: 1743604344}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
-  m_TagString: Enemy
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9328,9 +9339,9 @@ GameObject:
   - component: {fileID: 1753536349}
   - component: {fileID: 1753536348}
   - component: {fileID: 1753536347}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (2)
-  m_TagString: Enemy
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9477,9 +9488,9 @@ GameObject:
   - component: {fileID: 1803039473}
   - component: {fileID: 1803039472}
   - component: {fileID: 1803039471}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (3)
-  m_TagString: Enemy
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9626,7 +9637,7 @@ MonoBehaviour:
   dropChance: 3
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
-  clusterCount: 10
+  clusterCount: 50
   clusterSpread: 1
 --- !u!65 &1853057502
 BoxCollider:
@@ -9804,7 +9815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 1
-  currentXP: 0
+  currentXP: 100
   maxXP: 100
   xpBar: {fileID: 341624344}
   levelText: {fileID: 1706752899}
@@ -9843,6 +9854,18 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1273928898}
   bulletPrefab: {fileID: 8325532339822062111, guid: b6e8d2ecf01b70f44873b1a35ef78a03, type: 3}
   bulletSpeed: 40
+--- !u!114 &2067152184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067152153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410a3b56d8d89bd449d85b8319250461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7561950644580965861
 PrefabInstance:
   m_ObjectHideFlags: 0

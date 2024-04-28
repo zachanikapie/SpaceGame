@@ -7,17 +7,20 @@ public class BulletDamage : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // Check if the bullet hits an enemy (you may need to adjust the tag or layer check)
-        if (other.CompareTag("Enemy"))
+        // Check if the bullet hits an enemy (tag) or a wall (tag)
+        if (other.CompareTag("Enemy") || other.CompareTag("Wall"))
         {
-            // Get the script component responsible for handling enemy health
-            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
-
-            // Check if the enemyHealth variable is not null
-            if (enemyHealth != null)
+            if (other.CompareTag("Enemy"))
             {
-                // Deal damage to the enemy
-                enemyHealth.TakeDamage(damageAmount);
+                // Get the script component responsible for handling enemy health
+                EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+
+                // Check if the enemyHealth variable is not null
+                if (enemyHealth != null)
+                {
+                    // Deal damage to the enemy
+                    enemyHealth.TakeDamage(damageAmount);
+                }
             }
 
             // Instantiate the hit particle at the position of the collision
@@ -26,7 +29,7 @@ public class BulletDamage : MonoBehaviour
                 Instantiate(hitParticle, transform.position, Quaternion.identity);
             }
 
-            // Destroy the bullet
+            // Destroy the bullet after any collision
             Destroy(gameObject);
         }
     }

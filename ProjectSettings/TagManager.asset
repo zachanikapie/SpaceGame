@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Ally
   - HealthPickup
+  - EXP
+  - Wall
   layers:
   - Default
   - TransparentFX

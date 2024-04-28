@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EXPBall 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 95520d97c20043449ba214c18376aec9, type: 3}
+      propertyPath: m_TagString
+      value: EXP
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -102,7 +106,7 @@ MonoBehaviour:
   initialSpeed: 5
   acceleration: 40
   playerTag: Player
-  expToAdd: 10
+  expToAdd: 50
 --- !u!54 &-5762090472083535870
 Rigidbody:
   m_ObjectHideFlags: 0
