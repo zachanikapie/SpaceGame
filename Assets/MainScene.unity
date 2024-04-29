@@ -9413,7 +9413,7 @@ MonoBehaviour:
   - prefab: {fileID: 1742813773555268942, guid: d6b2143d1c469c242a79b17d83fbe3cf, type: 3}
     spawnInterval: 1
     timer: 0
-    burstSpawnCount: 4
+    burstSpawnCount: 10
   - prefab: {fileID: 7320135141986047883, guid: 47372fa1c23b86f4781700ddf8e9d037, type: 3}
     spawnInterval: 4
     timer: 0
@@ -10673,6 +10673,10 @@ PrefabInstance:
     - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: maxXPLevel9
       value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: currentLevel
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: level3Object
