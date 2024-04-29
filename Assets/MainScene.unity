@@ -10648,7 +10648,7 @@ PrefabInstance:
       objectReference: {fileID: 1170636532}
     - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: maxXP
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: xpBar
@@ -10662,6 +10662,18 @@ PrefabInstance:
       propertyPath: levelText
       value: 
       objectReference: {fileID: 1706752899}
+    - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: maxXPLevel3
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: maxXPLevel6
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: maxXPLevel9
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: level3Object
       value: 
@@ -10682,6 +10694,10 @@ PrefabInstance:
       propertyPath: level10Objects.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
+      propertyPath: previousObjectBeforeLevel3
+      value: 
+      objectReference: {fileID: 363435241}
     - target: {fileID: 4926237117533052291, guid: 013709b97d399e34aacbb0aec0a58ff2, type: 3}
       propertyPath: level10Objects.Array.data[0]
       value: 

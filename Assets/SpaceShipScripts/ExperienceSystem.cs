@@ -7,6 +7,9 @@ public class ExperienceSystem : MonoBehaviour
     public int currentLevel = 1;
     public int currentXP = 0;
     public int maxXP = 100; // Maximum XP needed for level up
+    public int maxXPLevel3 = 150; // Maximum XP needed for level 3
+    public int maxXPLevel6 = 200; // Maximum XP needed for level 6
+    public int maxXPLevel9 = 250; // Maximum XP needed for level 9
     public Slider xpBar; // Reference to the UI slider representing XP bar
     public TextMeshProUGUI levelText; // Reference to TextMeshPro text for displaying level
     public GameObject previousObjectBeforeLevel3; // Reference to the GameObject before level 3
@@ -40,6 +43,22 @@ public class ExperienceSystem : MonoBehaviour
     void LevelUp()
     {
         currentLevel++;
+        // Determine the max XP based on the current level
+        switch (currentLevel)
+        {
+            case 3:
+                maxXP = maxXPLevel3;
+                break;
+            case 6:
+                maxXP = maxXPLevel6;
+                break;
+            case 9:
+                maxXP = maxXPLevel9;
+                break;
+            default:
+                maxXP = 100; // Default max XP
+                break;
+        }
         currentXP = 0; // Reset XP
         // You can add other level up bonuses here
         UpdateLevelText(); // Update the level text when leveling up
