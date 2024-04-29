@@ -270,7 +270,7 @@ MonoBehaviour:
   healthPickupPrefab: {fileID: 0}
   healthDropChance: 0.5
   rocketRefillPrefab: {fileID: 7555631591212707038, guid: b8ed9b11878e44444adc37cfab485ec8, type: 3}
-  rocketRefillDropChance: 1
+  rocketRefillDropChance: 0.1
   hitParticle: {fileID: 5032592163096704526, guid: 74390e7e508ae00449786cad53d1c3c6, type: 3}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
   clusterCount: 5

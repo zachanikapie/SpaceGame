@@ -997,15 +997,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 6606513533077799236, guid: daa5e020676f18e4596580b677ce4c75, type: 3}
+  - {fileID: 605062358049972877, guid: 27f483325196e5a49adcc7e0578376cc, type: 3}
   - {fileID: 1742813773555268942, guid: d6b2143d1c469c242a79b17d83fbe3cf, type: 3}
   - {fileID: 7320135141986047883, guid: 47372fa1c23b86f4781700ddf8e9d037, type: 3}
   spawnInterval: 0.5
   spawnRadius: 35
   spawnProbabilities:
-  - 0
+  - 0.5
   - 1
-  - 0.3
+  - 0.1
   spawnYPosition: 0
 --- !u!4 &363435243
 Transform:
@@ -1106,6 +1106,7 @@ GameObject:
   - component: {fileID: 395057586}
   - component: {fileID: 395057585}
   - component: {fileID: 395057584}
+  - component: {fileID: 395057588}
   m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Wall
@@ -1123,7 +1124,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1199,6 +1200,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &395057588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395057583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcde85c1b119c8c42af6ebcba4896144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  hitParticle: {fileID: 0}
 --- !u!1 &422525848
 GameObject:
   m_ObjectHideFlags: 0
