@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   healthPickupPrefab: {fileID: 9096927352075101051, guid: a57d5070fe59440458e13443a2c5737f, type: 3}
-  healthDropChance: 0.5
+  healthDropChance: 1
   rocketRefillPrefab: {fileID: 0}
   rocketRefillDropChance: 0.3
   hitParticle: {fileID: 0}

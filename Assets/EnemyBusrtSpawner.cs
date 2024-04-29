@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemyBurstSpawner : MonoBehaviour
 {
     [System.Serializable]
     public class EnemySpawnSettings
@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
         public GameObject prefab;
         public float spawnInterval = 2f;
         [HideInInspector] public float timer = 0f;
+        public int burstSpawnCount = 5; // Number of enemies to spawn in a burst
     }
 
     public List<EnemySpawnSettings> enemySpawnSettings = new List<EnemySpawnSettings>(); // List of enemy spawn settings
@@ -36,8 +37,11 @@ public class EnemySpawner : MonoBehaviour
                 settings.timer -= Time.deltaTime;
                 if (settings.timer <= 0f)
                 {
-                    // Spawn enemy
-                    Instantiate(settings.prefab, transform.position, Quaternion.identity);
+                    // Spawn burst of enemies
+                    for (int i = 0; i < settings.burstSpawnCount; i++)
+                    {
+                        Instantiate(settings.prefab, transform.position, Quaternion.identity);
+                    }
                     settings.timer = settings.spawnInterval; // Reset timer
                 }
             }
