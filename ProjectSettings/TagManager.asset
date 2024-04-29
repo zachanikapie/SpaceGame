@@ -11,6 +11,7 @@ TagManager:
   - HealthPickup
   - EXP
   - Wall
+  - AmmoPickup
   layers:
   - Default
   - TransparentFX
