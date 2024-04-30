@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 1763978361680575164}
   - component: {fileID: 6497816835569577802}
   - component: {fileID: 7232631356880983563}
+  - component: {fileID: 1382019479615091612}
   m_Layer: 8
-  m_Name: Bullet 2 - Copy
+  m_Name: Bullet 3
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.168, z: 0}
-  m_LocalScale: {x: 1, y: 0.19603258, z: 11}
+  m_LocalScale: {x: 0.19603258, y: 0.19603258, z: 1.6486733}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 850e943f5610cdb4ab7a8bf0df8dd2fb, type: 2}
+  - {fileID: 2100000, guid: 95904cb72400fb048b593ce59a72c19e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,4 +148,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
-  hitParticle: {fileID: 0}
+  hitParticle: {fileID: 363015429067361276, guid: 5494d0be50beb7a42b9f0bcc34dfda56, type: 3}
+--- !u!114 &1382019479615091612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8325532339822062111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf823877c7e14d1479e535aafaa33c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: d077e7bf5cb37d44cba8a8db1539e246, type: 3}

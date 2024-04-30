@@ -12,6 +12,7 @@ TagManager:
   - EXP
   - Wall
   - AmmoPickup
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

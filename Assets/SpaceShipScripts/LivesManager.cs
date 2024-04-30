@@ -99,7 +99,7 @@ public class LivesManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") || other.CompareTag("EnemyBullet"))
         {
             LoseLife();
         }

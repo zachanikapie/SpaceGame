@@ -18,7 +18,7 @@ public class MeshRendererToggle : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Check if the collider is an enemy
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") || other.CompareTag("EnemyBullet"))
         {
             // Start toggling the MeshRenderer
             StartToggling();

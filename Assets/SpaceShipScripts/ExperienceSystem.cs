@@ -7,15 +7,13 @@ public class ExperienceSystem : MonoBehaviour
     public int currentLevel = 1;
     public int currentXP = 0;
     public int maxXP = 100; // Maximum XP needed for level up
-    public int maxXPLevel3 = 150; // Maximum XP needed for level 3
-    public int maxXPLevel6 = 200; // Maximum XP needed for level 6
-    public int maxXPLevel9 = 250; // Maximum XP needed for level 9
+    public int[] maxXPLevels = { 0, 0, 150, 0, 0, 200, 0, 0, 250 }; // Maximum XP needed for level 3, 6, and 9
     public Slider xpBar; // Reference to the UI slider representing XP bar
     public TextMeshProUGUI levelText; // Reference to TextMeshPro text for displaying level
     public GameObject previousObjectBeforeLevel3; // Reference to the GameObject before level 3
-    public GameObject level3Object; // Reference to the GameObject to enable at level 3
-    public GameObject level6Object; // Reference to the GameObject to enable at level 6
-    public GameObject level9Object; // Reference to the GameObject to enable at level 9
+    public GameObject[] level3Objects; // Reference to the GameObjects to enable at level 3
+    public GameObject[] level6Objects; // Reference to the GameObjects to enable at level 6
+    public GameObject[] level9Objects; // Reference to the GameObjects to enable at level 9
     public GameObject level10Object; // Reference to the GameObject to enable at level 10
 
     void Start()
@@ -44,20 +42,13 @@ public class ExperienceSystem : MonoBehaviour
     {
         currentLevel++;
         // Determine the max XP based on the current level
-        switch (currentLevel)
+        if (currentLevel < maxXPLevels.Length && maxXPLevels[currentLevel] != 0)
         {
-            case 3:
-                maxXP = maxXPLevel3;
-                break;
-            case 6:
-                maxXP = maxXPLevel6;
-                break;
-            case 9:
-                maxXP = maxXPLevel9;
-                break;
-            default:
-                maxXP = 100; // Default max XP
-                break;
+            maxXP = maxXPLevels[currentLevel];
+        }
+        else
+        {
+            maxXP = 100; // Default max XP
         }
         currentXP = 0; // Reset XP
         // You can add other level up bonuses here
@@ -74,38 +65,68 @@ public class ExperienceSystem : MonoBehaviour
                 Debug.Log("Disabled previous object before level 3");
             }
 
-            // Enable the level 3 GameObject if it's assigned and disable the GameObject corresponding to the previous level
-            if (currentLevel == 3 && level3Object != null)
+            // Enable the level 3 GameObjects if they're assigned and disable the GameObjects corresponding to the previous level
+            if (currentLevel == 3 && level3Objects != null)
             {
-                level3Object.SetActive(true);
-                Debug.Log("Enabled level 3 object");
+                foreach (GameObject obj in level3Objects)
+                {
+                    if (obj != null)
+                    {
+                        obj.SetActive(true);
+                    }
+                }
+                Debug.Log("Enabled level 3 objects");
             }
 
-            // Enable the level 6 GameObject if it's assigned and disable the GameObject corresponding to the previous level
-            if (currentLevel == 6 && level6Object != null)
+            // Enable the level 6 GameObjects if they're assigned and disable the GameObjects corresponding to the previous level
+            if (currentLevel == 6 && level6Objects != null)
             {
-                level6Object.SetActive(true);
-                Debug.Log("Enabled level 6 object");
-
-                // Disable the level 3 GameObject if it's assigned
-                if (level3Object != null)
+                foreach (GameObject obj in level6Objects)
                 {
-                    level3Object.SetActive(false);
-                    Debug.Log("Disabled level 3 object");
+                    if (obj != null)
+                    {
+                        obj.SetActive(true);
+                    }
+                }
+                Debug.Log("Enabled level 6 objects");
+
+                // Disable the level 3 GameObjects if they're assigned
+                if (level3Objects != null)
+                {
+                    foreach (GameObject obj in level3Objects)
+                    {
+                        if (obj != null)
+                        {
+                            obj.SetActive(false);
+                        }
+                    }
+                    Debug.Log("Disabled level 3 objects");
                 }
             }
 
-            // Enable the level 9 GameObject if it's assigned and disable the GameObject corresponding to the previous level
-            if (currentLevel == 9 && level9Object != null)
+            // Enable the level 9 GameObjects if they're assigned and disable the GameObjects corresponding to the previous level
+            if (currentLevel == 9 && level9Objects != null)
             {
-                level9Object.SetActive(true);
-                Debug.Log("Enabled level 9 object");
-
-                // Disable the level 6 GameObject if it's assigned
-                if (level6Object != null)
+                foreach (GameObject obj in level9Objects)
                 {
-                    level6Object.SetActive(false);
-                    Debug.Log("Disabled level 6 object");
+                    if (obj != null)
+                    {
+                        obj.SetActive(true);
+                    }
+                }
+                Debug.Log("Enabled level 9 objects");
+
+                // Disable the level 6 GameObjects if they're assigned
+                if (level6Objects != null)
+                {
+                    foreach (GameObject obj in level6Objects)
+                    {
+                        if (obj != null)
+                        {
+                            obj.SetActive(false);
+                        }
+                    }
+                    Debug.Log("Disabled level 6 objects");
                 }
             }
         }
