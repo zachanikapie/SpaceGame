@@ -15,6 +15,8 @@ public class ExperienceSystem : MonoBehaviour
     public GameObject[] level6Objects; // Reference to the GameObjects to enable at level 6
     public GameObject[] level9Objects; // Reference to the GameObjects to enable at level 9
     public GameObject level10Object; // Reference to the GameObject to enable at level 10
+    public TextMeshProUGUI scoreText; // Reference to TextMeshPro text for displaying score
+    private int currentScore = 0; // Current score of the player
 
     void Start()
     {
@@ -35,6 +37,13 @@ public class ExperienceSystem : MonoBehaviour
             LevelUp();
         }
         UpdateUI();
+    }
+
+    // Add score externally
+    public void AddExternalScore(int amount)
+    {
+        currentScore += amount;
+        UpdateScoreText();
     }
 
     // Level up the player
@@ -168,6 +177,15 @@ public class ExperienceSystem : MonoBehaviour
         if (levelText != null)
         {
             levelText.text = "Lvl: " + currentLevel.ToString();
+        }
+    }
+
+    // Update TextMeshPro text to display current score
+    void UpdateScoreText()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + currentScore.ToString();
         }
     }
 }

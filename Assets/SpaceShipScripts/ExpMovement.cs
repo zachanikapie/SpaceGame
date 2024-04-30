@@ -6,6 +6,7 @@ public class PrefabMovement : MonoBehaviour
     public float acceleration = 2f; // Acceleration rate
     public string playerTag = "Player"; // Tag of the player GameObject
     public int expToAdd = 10; // Experience points to add when collided with the player
+    public int scoreToAdd = 100; // Score points to add when collided with the player
 
     private GameObject player; // Reference to the player GameObject
     private float currentSpeed; // Current speed of the prefab movement
@@ -49,6 +50,7 @@ public class PrefabMovement : MonoBehaviour
             if (expSystem != null)
             {
                 expSystem.AddExternalXP(expToAdd);
+                expSystem.AddExternalScore(scoreToAdd);
             }
 
             // Destroy the prefab

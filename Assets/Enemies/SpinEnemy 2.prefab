@@ -276,7 +276,7 @@ MonoBehaviour:
   rocketRefillDropChance: 1
   hitParticle: {fileID: 0}
   clusterObject: {fileID: 8465325026282833317, guid: 519d6ba404d94834095b367eb485d0ba, type: 3}
-  clusterCount: 20
+  clusterCount: 50
   clusterSpread: 20
 --- !u!65 &8912604946076050711
 BoxCollider:
