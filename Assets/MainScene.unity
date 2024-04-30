@@ -736,10 +736,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1528086325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2938802, y: 0}
-  m_AnchorMax: {x: 0.7042719, y: 1}
-  m_AnchoredPosition: {x: 0.5, y: 0}
-  m_SizeDelta: {x: 1023, y: 0}
+  m_AnchorMin: {x: 0.26979858, y: 0}
+  m_AnchorMax: {x: 0.73179877, y: 1}
+  m_AnchoredPosition: {x: -0.5, y: 0}
+  m_SizeDelta: {x: 926, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &221802037
 MonoBehaviour:
@@ -1082,10 +1082,10 @@ RectTransform:
   - {fileID: 1378481639}
   m_Father: {fileID: 1528086325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166, y: 472}
-  m_SizeDelta: {x: 376.1403, y: 20}
+  m_AnchorMin: {x: 0.546, y: 0.9631003}
+  m_AnchorMax: {x: 0.62865925, y: 0.97300005}
+  m_AnchoredPosition: {x: 5.5, y: -0.2000122}
+  m_SizeDelta: {x: 226.14026, y: 8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &341624344
 MonoBehaviour:
@@ -1592,10 +1592,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1528086325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -282, y: -418}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.291, y: 0.024}
+  m_AnchorMax: {x: 0.39553505, y: 0.072000004}
+  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_SizeDelta: {x: 0, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &449835665
 MonoBehaviour:
@@ -2546,6 +2546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victoryCanvas: {fileID: 1771226341}
+  BossShip: {fileID: 513805440}
 --- !u!1 &779831495
 GameObject:
   m_ObjectHideFlags: 0
@@ -3652,10 +3653,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1528086325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 282.5, y: -418}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.5725351, y: 0.024}
+  m_AnchorMax: {x: 0.70900005, y: 0.072000004}
+  m_AnchoredPosition: {x: 28.5, y: 1.5}
+  m_SizeDelta: {x: -56, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1137536181
 MonoBehaviour:
@@ -9067,10 +9068,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1528086325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -299, y: 460}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.28146496, y: 0.947}
+  m_AnchorMax: {x: 0.531, y: 0.98100007}
+  m_AnchoredPosition: {x: -137.5, y: -8.5}
+  m_SizeDelta: {x: -275, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276091586
 MonoBehaviour:
@@ -9676,7 +9677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 7}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1423256208 stripped
@@ -10112,7 +10113,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -4.9999847, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1528086321
@@ -10514,10 +10515,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1528086325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 355, y: 460}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.643465, y: 0.9573915}
+  m_AnchorMax: {x: 0.72546494, y: 0.98100007}
+  m_AnchoredPosition: {x: 21.5, y: -13}
+  m_SizeDelta: {x: 43, y: 26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706752899
 MonoBehaviour:
@@ -10602,7 +10603,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 19.054688, w: 25.85437}
+  m_margin: {x: 0.13134766, y: 0, z: 19.054688, w: 25.85437}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
